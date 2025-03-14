@@ -20,13 +20,13 @@ bedrock:
   # Some hosting services change your Java port everytime you start the server and require the same port to be used for Bedrock.
   # This option makes the Bedrock port the same as the Java port every time you start the server.
   # This option is for the plugin version only.
-  clone-remote-port: false
+  clone-remote-port: False
   # The MOTD that will be broadcasted to Minecraft: Bedrock Edition clients. This is irrelevant if "passthrough-motd" is set to true
   # If either of these are empty, the respective string will default to "Geyser"
   motd1: "Geyser"
   motd2: "Another Geyser server."
   # The Server Name that will be sent to Minecraft: Bedrock Edition clients. This is visible in both the pause menu and the settings menu.
-  server-name: "Geyser"
+  server-name: "Zombie"
   # How much to compress network traffic to the Bedrock client. The higher the number, the more CPU usage used, but
   # the smaller the bandwidth used. Does not have any effect below -1 or above 9. Set to -1 to disable.
   compression-level: 6
@@ -35,7 +35,7 @@ bedrock:
   # broadcast-port: 19132
   # Whether to enable PROXY protocol or not for clients. You DO NOT WANT this feature unless you run UDP reverse proxy
   # in front of your Geyser instance.
-  enable-proxy-protocol: false
+  enable-proxy-protocol: True
   # A list of allowed PROXY protocol speaking proxy IP addresses/subnets. Only effective when "enable-proxy-protocol" is enabled, and
   # should really only be used when you are not able to use a proper firewall (usually true with shared hosting providers etc.).
   # Keeping this list empty means there is no IP address whitelist.
@@ -105,8 +105,7 @@ ping-passthrough-interval: 3
 forward-player-ping: false
 
 # Maximum amount of players that can connect. This is only visual at this time and does not actually limit player count.
-max-players: 100
-
+max-players: 25
 # If debug messages should be sent through console
 debug-mode: false
 
@@ -121,7 +120,7 @@ show-cooldown: title
 show-coordinates: true
 
 # Whether Bedrock players are blocked from performing their scaffolding-style bridging.
-disable-bedrock-scaffolding: false
+disable-bedrock-scaffolding: True
 
 # If set, when a Bedrock player performs any emote, it will swap the offhand and mainhand items, just like the Java Edition keybind
 # There are three options this can be set to:
@@ -157,7 +156,7 @@ add-non-bedrock-items: true
 # Bedrock prevents building and displaying blocks above Y127 in the Nether.
 # This config option works around that by changing the Nether dimension ID to the End ID. 
 # The main downside to this is that the entire Nether will have the same red fog rather than having different fog for each biome.
-above-bedrock-nether-building: false
+above-bedrock-nether-building: True
 
 # Force clients to load all resource packs if there are any.
 # If set to false, it allows the user to connect to the server even if they don't
